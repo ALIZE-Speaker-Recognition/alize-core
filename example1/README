@@ -1,0 +1,24 @@
+How to launch the example:
+
+type: ./example1.exe --config=../config/config.xml
+
+or
+
+type: ./example.exe --mixtureDistribCount=128 --topDistribsCount=64
+ --computeLLKWithTopDistribs=PARTIAL
+                    --featureFilesPath=../data/prm/
+ --loadFeatureFileFormat=SPRO3
+ --loadFeatureFileExtension=.prm
+                    --featureServerMemAlloc=10000000
+ --mixtureFilesPath=../data/gmm/
+ --loadMixtureFileFormat=AMIRAL
+                    --loadMixtureFileExtension=.gmm
+ --saveMixtureFileFormat=XML
+ --saveMixtureFileExtension=.xml
+                    --minLLK=-100
+ --maxLLK=100
+ --distribType=GD
+
+or
+
+just type: ./main.sh

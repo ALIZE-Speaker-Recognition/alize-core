@@ -1,0 +1,31 @@
+TestMixtureGD.o: TestMixtureGD.cpp TestMixtureGD.h Test.h \
+ ../../src/Object.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cassert \
+ /usr/include/assert.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h \
+ ../../src/MixtureGD.h ../../src/Mixture.h \
+ ../../src/DistribRefVector.h ../../src/Distrib.h \
+ ../../src/DoubleVector.h ../../src/alizeString.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/iosfwd \
+ ../../src/DistribGD.h ../../src/AutoDestructor.h \
+ ../../src/Exception.h ../../src/ULongVector.h
+TestMixtureGD.cpp :
+TestMixtureGD.h :
+Test.h :
+../../src/Object.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cassert :
+/usr/include/assert.h :
+/usr/include/features.h :
+/usr/include/sys/cdefs.h :
+/usr/include/gnu/stubs.h :
+../../src/MixtureGD.h :
+../../src/Mixture.h :
+../../src/DistribRefVector.h :
+../../src/Distrib.h :
+../../src/DoubleVector.h :
+../../src/alizeString.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/iosfwd :
+../../src/DistribGD.h :
+../../src/AutoDestructor.h :
+../../src/Exception.h :
+../../src/ULongVector.h :
