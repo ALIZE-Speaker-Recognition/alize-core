@@ -42,5 +42,8 @@ case "$1" in
 	;;
 	build|*)
 	build
+echo Copying libalize.a in lib folder
+cp ./src/libalize.a lib
+
 esac
 
