@@ -1,0 +1,38 @@
+########## Directories ############
+ALIZE_DIR=
+LIBSDIR = -L ../src
+LIB=$(LIBSDIR)/libalize.a
+INCLDIR = -I ./src -I ../src/
+BIN_DIR=./bin/
+SRC_DIR=./src
+OBJ_DIR=./src
+# Compilateur #
+CPP = g++
+LIBS = -lalize -lm
+RM= /bin/rm
+
+# Executable #
+EXEC = ./src/test.exe
+
+# Debug #
+	CXXFLAGS=-Wall -O2
+	LDFLAGS=-Wall -O2
+
+#####  Sources  #######
+SRC= $(wildcard $(SRC_DIR)/*.cpp)
+OBJ= $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+#######################
+
+all: $(DEPS) $(EXEC) 
+
+$(EXEC): $(OBJ)
+	$(CPP) $(CXXFLAGS) $(LIBSDIR) -o $@ $^ $(LDFLAGS) $(LIBS)
+
+$(OBJ_DIR)/%.o:$(SRC_DIR)/%.cpp
+	$(CPP) $(INCLDIR) $(CXXFLAGS) -o $@ -c $<
+
+install: $(EXEC)
+	cp $(EXEC) $(BIN_DIR)
+
+clean:
+	@$(RM) -rf src/*.o $(EXEC)

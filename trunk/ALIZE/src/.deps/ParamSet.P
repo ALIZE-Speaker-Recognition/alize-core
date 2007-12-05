@@ -1,0 +1,22 @@
+ParamSet.o: ParamSet.cpp /usr/include/c++/3.3/new \
+  /usr/include/c++/3.3/cstddef \
+  /usr/lib/gcc-lib/i486-linux/3.3.3/include/stddef.h \
+  /usr/include/c++/3.3/exception ParamSet.h Object.h \
+  /usr/include/c++/3.3/cassert /usr/include/assert.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h String.h ObjectRefVector.h Exception.h
+ParamSet.cpp :
+/usr/include/c++/3.3/new :
+/usr/include/c++/3.3/cstddef :
+/usr/lib/gcc-lib/i486-linux/3.3.3/include/stddef.h :
+/usr/include/c++/3.3/exception :
+ParamSet.h :
+Object.h :
+/usr/include/c++/3.3/cassert :
+/usr/include/assert.h :
+/usr/include/features.h :
+/usr/include/sys/cdefs.h :
+/usr/include/gnu/stubs.h :
+String.h :
+ObjectRefVector.h :
+Exception.h :

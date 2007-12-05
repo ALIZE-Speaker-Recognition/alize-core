@@ -1,0 +1,69 @@
+TestFeatureFileReaderRaw.o: TestFeatureFileReaderRaw.cpp \
+ TestFeatureFileReaderRaw.h Test.h ../../src/Object.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cassert \
+ /usr/include/assert.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h \
+ ../../src/FeatureFileReaderRaw.h ../../src/FeatureFileReaderSingle.h \
+ ../../src/FeatureFileReaderAbstract.h ../../src/FeatureInputStream.h \
+ ../../src/FeatureFlags.h ../../src/alizeString.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/iosfwd \
+ ../../src/Feature.h ../../src/Config.h ../../src/XList.h \
+ ../../src/XLine.h ../../src/ObjectRefVector.h ../../src/Exception.h \
+ ../../src/MixtureFileReaderAbstract.h \
+ ../../src/SegServerFileReaderAbstract.h ../../src/FileReader.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cstdio \
+ /usr/include/stdio.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/bits/sched.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/wchar.h /usr/include/gconv.h \
+ /usr/lib/gcc-lib/i386-linux/2.95.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h ../../src/MixtureFileWriter.h \
+ ../../src/FileWriter.h ../../src/FeatureFileWriter.h \
+ ../../src/FeatureFileReaderSPro3.h ../../src/SegServerFileWriter.h \
+ ../../src/Distrib.h
+TestFeatureFileReaderRaw.cpp :
+TestFeatureFileReaderRaw.h :
+Test.h :
+../../src/Object.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cassert :
+/usr/include/assert.h :
+/usr/include/features.h :
+/usr/include/sys/cdefs.h :
+/usr/include/gnu/stubs.h :
+../../src/FeatureFileReaderRaw.h :
+../../src/FeatureFileReaderSingle.h :
+../../src/FeatureFileReaderAbstract.h :
+../../src/FeatureInputStream.h :
+../../src/FeatureFlags.h :
+../../src/alizeString.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/iosfwd :
+../../src/Feature.h :
+../../src/Config.h :
+../../src/XList.h :
+../../src/XLine.h :
+../../src/ObjectRefVector.h :
+../../src/Exception.h :
+../../src/MixtureFileReaderAbstract.h :
+../../src/SegServerFileReaderAbstract.h :
+../../src/FileReader.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/../../../../include/g++-3/cstdio :
+/usr/include/stdio.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/include/stddef.h :
+/usr/include/bits/types.h :
+/usr/include/bits/pthreadtypes.h :
+/usr/include/bits/sched.h :
+/usr/include/libio.h :
+/usr/include/_G_config.h :
+/usr/include/wchar.h :
+/usr/include/bits/wchar.h :
+/usr/include/gconv.h :
+/usr/lib/gcc-lib/i386-linux/2.95.4/include/stdarg.h :
+/usr/include/bits/stdio_lim.h :
+../../src/MixtureFileWriter.h :
+../../src/FileWriter.h :
+../../src/FeatureFileWriter.h :
+../../src/FeatureFileReaderSPro3.h :
+../../src/SegServerFileWriter.h :
+../../src/Distrib.h :
