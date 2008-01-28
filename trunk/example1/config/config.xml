@@ -1,0 +1,17 @@
+<config version="1">
+  <param name="mixtureDistribCount">128</param>
+  <param name="topDistribsCount">64</param>
+  <param name="computeLLKWithTopDistribs">PARTIAL</param>
+  <param name="featureFilesPath">../data/prm/</param>
+  <param name="loadFeatureFileFormat">SPRO3</param>
+  <param name="loadFeatureFileExtension">.prm</param>
+  <param name="featureServerMemAlloc">10000000</param>
+  <param name="mixtureFilesPath">../data/gmm/</param>
+  <param name="loadMixtureFileFormat">AMIRAL</param>
+  <param name="loadMixtureFileExtension">.gmm</param>
+  <param name="saveMixtureFileFormat">XML</param>
+  <param name="saveMixtureFileExtension">.xml</param>
+  <param name="minLLK">-100</param>
+  <param name="maxLLK">100</param>
+  <param name="distribType">GD</param>
+</config>

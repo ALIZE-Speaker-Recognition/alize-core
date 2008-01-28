@@ -1,0 +1,15 @@
+<config>
+  <param name="distribType">GD</param>
+  <param name="vectSize">32</param>
+  <param name="mixtureDistribCount">128</param>
+  <param name="featureFlags">110000</param>
+  <param name="maxLLK">1e10</param>
+  <param name="minLLK">-1e10</param>
+  <param name="bigEndian">false</param>
+  <param name="sampleRate">100.0</param>
+  <param name="saveMixtureFileType">XML</param>
+  <param name="loadFeatureFileType">SPRO3_FEATURES</param>
+  <param name="featureServerBufferSize">2</param>
+</config>
+
+

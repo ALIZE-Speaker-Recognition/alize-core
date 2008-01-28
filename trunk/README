@@ -1,0 +1,31 @@
+##########################################################
+#      MISTRAL PROJECT - 2007                            
+#											  
+# Readme File of ALIZE package		
+#							
+# Last edit: 5 décember 2007		
+# Last editor : E.charton/eric.charton@univ-avignon.fr 
+#						
+# Version : 1.31 - 		
+##########################################################
+
+This package is part of the Mistral Project. Please visit http://mistral.univ-avignon.fr 
+for more informations and documentations.
+
+The ALIZE library is ready to use and compile. Juste launch autogen.sh (you must have 
+gcc 4 installed). 
+
+FAQ
+----
+
+Q: How to generate the ALIZE library
+A: In a shell, ./autogen.sh, libalize.a can be found in ./src/ and ./lib/ folder
+
+Q: How to I link ALIZE with my projects
+A: See the example in the ./exemple directory. Just include the header file alize.h at the begining of your source code and link statically libalize.a during your project compilation
+
+Q: After ./autogen.sh, autoconf tells ./ltmain.sh required is missing and stops.
+A: In a bash shell, do > ltmain.sh or touch ltmain.sh
+
+Q: How to generate Doxygen documentation
+A: In a shell, in the main folder of Alize, doxygen doxygen.cfg (need to have doxygen installed)
