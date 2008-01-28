@@ -1,0 +1,15 @@
+AC_INIT(Makefile.am)
+AM_INIT_AUTOMAKE(libalize,0.0)
+
+AC_LIBTOOL_DLOPEN
+AM_PROG_LIBTOOL
+
+prefix=`pwd`
+
+CXXFLAGS="-O3 -ffast-math -Wall -march=pentium4"
+
+AC_PROG_CXX
+
+AC_PROG_INSTALL
+
+AC_OUTPUT(Makefile src/Makefile)
