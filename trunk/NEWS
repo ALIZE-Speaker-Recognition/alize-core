@@ -1,0 +1,53 @@
+##########################################################
+#      		ALIZE PROJECT - 2003-2010
+#	  http://alize.univ-avignon.fr
+#								
+# V2.0 / November 1th 2010
+#
+# Please visit:
+# http://alize.univ-avignon.fr
+#
+##########################################################
+
+What's new !
+
+2.0
+	SPRO files are removed due to LGPL NEVERTHELESS SPRO v5.0 became a software under MIT licence (kind of BSD modified licence)
+	modification installation process
+
+1.35
+	We had applied the LIUM Patches (N° p1 to p6) on this version. Diffs can be done trough the svn.
+	Details follows:
+		- p1:
+			- add 2 fonctions in XList: addline(key, value), seachValue(key)
+			- add 1 fonction in Xline: create(key value)
+		- p2: patch LK Vector
+			- add copy constructor
+			- add pack(capacity) to resize the vector to a capacity
+		- p3
+			- new methods in FrameAcc*: deaccumulate(frame), getDet()
+			- new/modify methods FrameAccG*: add(FrameAccG*), comuputeAll()
+		- p4
+			- new method in MixtureStat.*: computeAndAccumulateLLK(const Feature& f, const 
+				LKVector& topDistribsVector, double w = 1.0f)
+			- modify methods in StatServer.*:some DEPRECATED, computeLLK given top gaussian vector
+		- p5
+			- add method setId(String) in Mixture
+		- p6
+			- corrected an enum: removed trailing ',' at the end
+			- changed the detection of LIUM segmentation file format 
+	Detailed revision and discussions at http://alize.univ-avignon.fr/wiki/index.php/Alize_1.35
+
+1.33
+	Library
+		- Some modifications to permit compilation under Visual C++ 2005
+
+1.32
+	SPRO
+		- Adaptation of Spro inclusion / Removed misc.c, spro.h and sig.c
+		- Modification of FeatureComputer.cpp to include this mods
+		- Modification of FeatureComputer.h
+		- (all functions are renamed / objective is to avoid functions conflict)
+		- Modification of compilation list / SRC/Makefile.am
+		- Modification of alize.makefile
+	
