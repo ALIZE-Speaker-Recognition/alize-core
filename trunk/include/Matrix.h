@@ -73,9 +73,12 @@
 #include <fstream>
 #include <memory.h>
 #include <cstdlib>
-//#if defined(_WIN32)
-//#include <malloc.h>
-//#endif
+#if defined (_WIN32)
+#define uint32_t unsigned __int32
+#else
+#include <stdint.h>
+#endif
+
 
 #include "RealVector.h"
 #include "DoubleSquareMatrix.h"
@@ -686,8 +689,8 @@ namespace alize
 
   private:
 
-    unsigned long _cols;
-    unsigned long _rows;
+    uint32_t _cols;
+    uint32_t _rows;
     RealVector<T> _array;
 
 	unsigned long fabs(unsigned long x) { return x; };
