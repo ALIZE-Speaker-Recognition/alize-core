@@ -238,4 +238,45 @@ String M::toString() const
 M::~DoubleSquareMatrix() {}
 //-------------------------------------------------------------------------
 
+//-------------------------------------------------------------------------
+real_t M::upperCholesky(DoubleSquareMatrix& m)
+{
+  long size = m._size; // unsigned long -> long
+  if (size == 0)
+    throw Exception("Cannot invert matrix : dimension = 0",__FILE__, __LINE__);
+  if (size !=_size)
+	  throw Exception("Cannot return the invert matrix : dimension not compatible",__FILE__, __LINE__);
+
+
+  DoubleVector diag(_size, _size);
+  DoubleVector b(_size, _size);
+  DoubleSquareMatrix tmp(*this);
+  real_t* pMatrix = m.getArray();
+  real_t* pTmp = tmp.getArray();
+  real_t* pDiag = diag.getArray();
+ 
+  // Cholesky decomposition: A = L*trans(L)
+  choleskyDecomp(pTmp, pDiag, _size);
+
+  //At this point, the lower triangle of pTmp contains the cholesky decomposition
+  // Diagonal elements are in pDiag
+  
+  real_t det = pDiag[0]*pDiag[0];
+  for(long k=1;k<size;k++){
+	  det *= pDiag[k]*pDiag[k];
+  }
+
+  //Fill the upper triangular matrix m
+  m.setAllValues(0.0);
+  for(long i=0;i<size;i++){
+	  for(long j=i+1;j<size;j++){
+			m(i,j) = pTmp[i*size+j];
+	  }
+	  //Fill the diagonal of m with pDiag
+	  m(i,i) = pDiag[i];
+  }
+  return det;
+}
+
+
 #endif  // ALIZE_DoubleSquareMatrix_cpp
