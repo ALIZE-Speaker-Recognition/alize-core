@@ -146,6 +146,7 @@ namespace alize
     virtual String toString() const;
     virtual String getClassName() const;
 
+    real_t upperCholesky(DoubleSquareMatrix& m);
 
   private:
 
@@ -159,4 +160,3 @@ namespace alize
 } // end namespace alize
 
 #endif  // ALIZE_DoubleSquareMatrix_h
-
