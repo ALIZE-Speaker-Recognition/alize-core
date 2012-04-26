@@ -73,8 +73,8 @@
 #include "Object.h"
 #include <new>
 #include <memory.h>
-#include "DoubleSquareMatrix.h"
 #include "Exception.h"
+#include "DoubleSquareMatrix.h"
 #include "Feature.h"
 
 namespace alize
@@ -338,7 +338,9 @@ namespace alize
   template class RefVector<DoubleVector>;
   template class RefVector<SegCluster>;
   template class RefVector<MixtureGDStat>;
+  template class RefVector<MixtureStat>;
   template class RefVector<Feature>;
+  template class RefVector<XList>;
 #endif
 
 } // end namespace alize
