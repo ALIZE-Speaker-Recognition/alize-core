@@ -61,6 +61,7 @@
 #include "XListFileReader.h"
 #include "Config.h"
 #include <fstream>
+#include <LKVector.h>
 
 using namespace alize;
 
@@ -200,6 +201,42 @@ XLine& XList::getAllElements() const
       _line.addElement(l.getElement(j, false));
   }
   return _line; 
+}
+//-------------------------------------------------------------------------
+void XList::sortByElementNumber(String order){
+
+	// Get the number of sessions per speaker
+	LKVector spk(0,0);
+	for(unsigned long i=0;i<_vector.size();i++){
+		LKVector::type sps;
+		sps.idx = i;
+		sps.lk = _vector.getObject(i).getElementCount();
+		spk.addValue(sps);
+	}
+	// Sort Xlines of the temporary XList by element number
+	spk.descendingSort();
+
+	// Copy the current RefVector<XLine> into a temporary one
+	RefVector<XLine> tmpX;
+	for(unsigned long i=0;i<_vector.size();i++){
+		XLine *ll = new XLine(_vector.getObject(i));
+		tmpX.addObject(*ll);
+	}
+
+	// Remove all elements from the XList
+	_vector.deleteAllObjects();
+
+	// Fill the XList according to the number of elements
+	if(order == "descend"){
+		for(unsigned long i=0;i<tmpX.size();i++){
+			_vector.addObject(tmpX.getObject(spk[i].idx));
+		}
+	}
+	else if(order == "ascend"){
+		for(long i=tmpX.size()-1;i>=0;i--){
+			_vector.addObject(tmpX.getObject(spk[i].idx));
+		}
+	}
 }
 //-------------------------------------------------------------------------
 void XList::reset()
