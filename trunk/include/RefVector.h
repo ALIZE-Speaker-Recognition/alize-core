@@ -341,6 +341,7 @@ namespace alize
   template class RefVector<MixtureStat>;
   template class RefVector<Feature>;
   template class RefVector<XList>;
+  template class RefVector<MixtureGD>;
 #endif
 
 } // end namespace alize
