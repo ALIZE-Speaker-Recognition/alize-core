@@ -177,11 +177,10 @@ namespace alize
     /// 
     XLine* findLine(const String& key, unsigned long idx = 0) const;
 
-    /// Load a file and order the lines accordingto the number of elements on the line
-    /// @param order could be "ascend" or descend
-    ///
-	void sortByElementNumber(String order);
-
+	/// Sort the Xlines by 
+	/// @param order could be 'ascend' or 'descend'. Default value is 'descend'
+	/// 
+	void sortByElementNumber(String order = "descend");
 
     /// Remove all lines
     ///
