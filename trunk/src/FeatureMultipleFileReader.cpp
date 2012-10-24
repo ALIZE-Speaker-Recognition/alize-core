@@ -109,6 +109,8 @@ R& R::create(const XLine& list, const Config& c,
 //-------------------------------------------------------------------------
 bool R::readFeature(Feature& f, unsigned long s) { return rw(true, f, s); }
 //-------------------------------------------------------------------------
+bool R::addFeature(const Feature& f) { throw Exception ("featureMultipleFileReader::addFeature not yet implemented", __FILE__, __LINE__); }
+//-------------------------------------------------------------------------
 bool R::writeFeature(const Feature& f, unsigned long step)
 {
   // temporary test

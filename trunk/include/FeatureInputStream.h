@@ -126,6 +126,14 @@ namespace alize
     ///
     virtual bool readFeature(Feature& f, unsigned long s = 1) = 0;
 
+    /// adds a feature in the buffer is enougth memory have been allocated by 
+    /// featureServerMemAlloc option
+    /// @param f the feature to add in the buffer
+    /// @return right if ok
+    /// @exception if not enougth space
+    ///
+    virtual bool addFeature(const Feature& f) = 0;
+
     /// Writes a feature in the stream and move the pointer s step
     /// forward
     /// @param f the feature to store the data read
