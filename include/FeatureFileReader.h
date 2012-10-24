@@ -143,6 +143,7 @@ namespace alize
 
     virtual void seekFeature(unsigned long featureNbr,
                              const String& srcName = "");
+    virtual bool addFeature(const Feature& f);
     virtual bool readFeature(Feature& f, unsigned long s = 1);
 
     virtual bool writeFeature(const Feature& f, unsigned long step = 1);

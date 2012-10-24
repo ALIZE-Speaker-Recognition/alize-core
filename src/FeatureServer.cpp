@@ -250,6 +250,17 @@ bool S::readFeature(Feature& f, unsigned long step)
   return ok;
 }
 //-------------------------------------------------------------------------
+bool S::addFeature(const Feature& f)
+{
+  if (_pInputStream == NULL)
+    return false;
+  if (!getConfig().existsParam_featureServerMemAlloc)
+  	throw Exception("featureServerMemAlloc needed to be able to add Feature to a featureServer", __FILE__, __LINE__);
+  bool ok = inputStream().addFeature(f);
+  _error = inputStream().getError();
+  return ok;
+}
+//-------------------------------------------------------------------------
 const String& S::getServerName() const { return _serverName; }
 //-------------------------------------------------------------------------
 void S::setServerName(const String& s) { _serverName = s; }

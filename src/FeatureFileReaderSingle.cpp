@@ -66,6 +66,8 @@
 #include "RealVector.h"
 #include "FileReader.h"
 
+#include <iostream>
+
 using namespace alize;
 typedef FeatureFileReaderSingle R;
 
@@ -225,6 +227,30 @@ bool R::readFeature(Feature& f, unsigned long step)
     f.setLabelCode(_pLabelServer->addLabel(l));
   }
   _error = NO_ERROR;
+  return true;
+}
+//-------------------------------------------------------------------------
+bool R::addFeature(const Feature& f) {
+	/* if not yet read --> not charged in memory */
+	if (_nbStored == 0) {
+		Feature tmp;
+		this->readFeature(tmp);
+		_featureIndex=0;
+	}
+	unsigned long featureServerMemAlloc = getConfig().getParam_featureServerMemAlloc();
+	if (((_nbStored+1)*_vectSize*sizeof(float))>getConfig().getParam_featureServerMemAlloc()) {
+		throw Exception("Feature adding not possible (not enougth space	regarding featureServerMemAlloc parameter)", __FILE__, __LINE__);
+	}
+	// copy of the data at the end
+	_pBuffer->setSize(_nbStored*_vectSize);
+	fprintf(stderr, "%d ---", (int)_pBuffer->size());
+	unsigned long cptri;
+	for (cptri=0 ; cptri<f.getVectSize() ; cptri++) {
+		_pBuffer->addValue((float)f[cptri]);
+	}
+	_nbStored++;
+	fprintf(stderr, " %d\n", (int)_pBuffer->size());
+	fprintf(NULL, "toto");
   return true;
 }
 //-------------------------------------------------------------------------

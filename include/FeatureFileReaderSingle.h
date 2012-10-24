@@ -95,6 +95,7 @@ namespace alize
     virtual void close();
 
     virtual bool readFeature(Feature&, unsigned long step = 1);
+    virtual bool addFeature(const Feature& f);
     virtual bool writeFeature(const Feature& f, unsigned long step = 1);
     virtual unsigned long getSourceCount();
     virtual unsigned long getFeatureCountOfASource(unsigned long srcIdx);

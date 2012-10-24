@@ -170,6 +170,15 @@ bool R::readFeature(Feature& f, unsigned long step)
   return ok;
 }
 //-------------------------------------------------------------------------
+bool R::addFeature(const Feature& f)
+{
+  if (_pFeatureReader == NULL)
+    return false;
+  bool ok = _pFeatureReader->addFeature(f);
+//  _error = _pFeatureReader->getError();
+  return ok;
+}
+//-------------------------------------------------------------------------
 void R::seekFeature(unsigned long featureNbr, const String& sourceName)
 {
   if (_pFeatureReader != NULL)

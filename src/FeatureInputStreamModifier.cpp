@@ -172,6 +172,13 @@ bool M::readFeature(Feature& f, unsigned long step)
   return ok;
 }
 //-------------------------------------------------------------------------
+bool M::addFeature(const Feature& f)
+{
+  bool ok;
+  ok = _pInput->addFeature(f);
+  return ok;
+}
+//-------------------------------------------------------------------------
 bool M::writeFeature(const Feature& f, unsigned long step)
 {
   bool ok;

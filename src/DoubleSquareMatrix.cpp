@@ -111,7 +111,7 @@ real_t M::invert(DoubleSquareMatrix& m)
   long size = m._size; // unsigned long -> long
   if (size == 0)
     throw Exception("Cannot invert matrix : dimension = 0",__FILE__, __LINE__);
-  if (size !=_size)
+  if (size != (long)_size)
 	  throw Exception("Cannot return the invert matrix : dimension not compatible",__FILE__, __LINE__);
 
 
@@ -244,7 +244,7 @@ real_t M::upperCholesky(DoubleSquareMatrix& m)
   long size = m._size; // unsigned long -> long
   if (size == 0)
     throw Exception("Cannot invert matrix : dimension = 0",__FILE__, __LINE__);
-  if (size !=_size)
+  if (size != (long)_size)
 	  throw Exception("Cannot return the invert matrix : dimension not compatible",__FILE__, __LINE__);
 
 

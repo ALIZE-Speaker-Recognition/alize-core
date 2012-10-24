@@ -231,6 +231,13 @@ namespace alize
     ///    
     virtual bool readFeature(Feature& f, unsigned long s = 1);
 
+    /// adds a feature
+    /// @param f the feature to store the data read
+    /// @return false not possible to add feature
+    /// @exception featureServerMemAlloc is required to add feature to a featureServer
+    ///    
+    virtual bool addFeature(const Feature& f);
+
     /// Writes a feature
     /// @param f the feature
     /// @param s after writing, the feature pointer is moved s steps forward.

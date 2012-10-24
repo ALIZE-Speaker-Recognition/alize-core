@@ -112,6 +112,8 @@ namespace alize
     ///
     void setMask(const String& m);
     
+    virtual bool addFeature(const Feature& f);
+
     virtual bool readFeature(Feature& f, unsigned long step = 1);
 
     virtual bool writeFeature(const Feature& f, unsigned long step = 1);
