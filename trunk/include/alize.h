@@ -61,6 +61,7 @@
 #include "RealVector.h"
 #include "RefVector.h"
 #include "Matrix.h"
+#include "BoolMatrix.h"
 #include "DoubleSquareMatrix.h"
 #include "ULongVector.h"
 #include "Config.h"
