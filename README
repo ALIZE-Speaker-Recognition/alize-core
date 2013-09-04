@@ -1,8 +1,8 @@
 ##########################################################
-#      		ALIZE PROJECT - 2003-2011
+#      		ALIZE PROJECT - 2003-2013
 #	  http://alize.univ-avignon.fr
 #								
-# V2.0 / May 1th 2011
+# V3.0 / February 18th 2013
 #
 # Please visit:
 # http://alize.univ-avignon.fr
@@ -13,25 +13,25 @@
 This package is part of the ALIZE Project. Please visit http://alize.univ-avignon.fr 
 for more informations and documentations.
 
-In case of trouble, see the "how to compile guide on" : 
-http://mistral.univ-avignon.fr/mistral_dev/pdf/mistral_technote.004.howToCompileMistral.pdf
+In case of trouble, see the ALIZE FAQ on : 
+http://alize.univ-avignon.fr/mediawiki/index.php/Main_Page
 
 See also News.txt for information about important modifications done on ALIZE library
 
 FAQ
 ----
 
-Q: Want is needed to install ALIZE library
+Q: What is needed to install ALIZE library
 A: aclocal, autoconf, automake and libtool are required to compile ALIZE library
 
 Q: How to generate the ALIZE library under Linux, MacOS and cygwin
 A: In a shell, run successively: aclocal, automake, autoconf, ./configure, make
 
 Q: How to generate the ALIZE library under windows/Visual C++
-A: Use the ALIZE_2005.sln solution file. If your version of Visual Studio is newly than 2005 you just have to convert it using Visual studio tools.
+A: Use the ALIZE.sln solution file.
 
 Q: I have some problems to compile ALIZE
-A: Please read this technote : http://mistral.univ-avignon.fr/mistral_dev/pdf/mistral_technote.004.howToCompileMistral.pdf if you don't find your answer feel free to send a email to dev-alize@listes.univ-avignon.fr
+A: Please refer to : http://alize.univ-avignon.fr/mediawiki/index.php/Main_Page if you don't find your answer feel free to send a email to dev-alize@listes.univ-avignon.fr
 
 Q: How to I link ALIZE with my projects
 A: See the example in the ./exemple directory of LIA_RAL directory. Just include the header file alize.h at the begining of your source code and link statically libalize.a during your project compilation

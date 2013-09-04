@@ -1,8 +1,8 @@
 ##########################################################
-#      		ALIZE PROJECT - 2003-2010
+#      		ALIZE PROJECT - 2003-2013
 #	  http://alize.univ-avignon.fr
 #								
-# V2.0 / November 1th 2010
+# V3.0 / February 18th 2013
 #
 # Please visit:
 # http://alize.univ-avignon.fr
@@ -10,6 +10,9 @@
 ##########################################################
 
 What's new !
+
+3.0
+	ALIZE Visual Studio solution has been generated for an easier experience.
 
 2.0
 	SPRO files are removed due to LGPL NEVERTHELESS SPRO v5.0 became a software under MIT licence (kind of BSD modified licence)
