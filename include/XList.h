@@ -158,12 +158,19 @@ namespace alize
     ///
     XLine* getLine() const;
 
-    /// Gets all elements of the list.\n
+    /// Gets all elements of the list.
     /// The current element of the line is the first one.
     /// @return a reference to a XLine object that contains all elements
     ///     of all lines
     ///
     XLine& getAllElements() const;
+
+	/// Gets all unique elements of the list.
+    /// The current element of the line is the first one.
+    /// @return a reference to a XLine object that contains all elements
+    ///     of all lines
+    ///
+    XLine& getAllUniqueElements() const;
 
     /// Gets the number of lines in the list
     /// @return  the number of lines in the list
