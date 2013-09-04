@@ -203,6 +203,19 @@ XLine& XList::getAllElements() const
   return _line; 
 }
 //-------------------------------------------------------------------------
+XLine& XList::getAllUniqueElements() const
+{
+  _line.reset();
+  for (unsigned long i=0; i<_vector.size(); i++)
+  {
+    XLine& l = _vector.getObject(i);
+    for (unsigned long j=0; j<l.getElementCount(); j++)
+		if(_line.getIndex(l.getElement(j, false)) == -1)
+			_line.addElement(l.getElement(j, false));
+  }
+  return _line; 
+}
+//-------------------------------------------------------------------------
 void XList::sortByElementNumber(String order){
 
 	// Get the number of sessions per speaker

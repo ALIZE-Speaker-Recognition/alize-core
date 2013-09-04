@@ -170,11 +170,13 @@ void S::init() // private
   {
     if (!config.existsParam_vectSize)
       const_cast<Config&>(config).setParam("vectSize", String::valueOf(vectSize));
-    else if (config.getParam_vectSize() != vectSize)
+    else if (config.getParam_vectSize() != vectSize){
+
       throw Exception("vectSize from config ("
             + String::valueOf(config.getParam_vectSize())
             + ") is not equal to vectSize from file ("
             + String::valueOf(getVectSize()) + ")", __FILE__, __LINE__);
+	}
   }
   /*try
   {

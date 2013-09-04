@@ -5,7 +5,6 @@ AudioFileReader.cpp\
 AudioFrame.cpp\
 AudioInputStream.cpp\
 AutoDestructor.cpp\
-BoolMatrix.cpp\
 CmdLine.cpp\
 Config.cpp\
 ConfigChecker.cpp\

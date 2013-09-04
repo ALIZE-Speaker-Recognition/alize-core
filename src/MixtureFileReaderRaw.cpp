@@ -89,7 +89,7 @@ const Mixture& R::readMixture()
       case DistribType_GD:
         return readMixtureGD();
       case DistribType_GF:
-        return readMixtureGD();
+        return readMixtureGF();
     }
   }
   throw Exception("Don't know how to read this king of mixture",
@@ -101,10 +101,10 @@ const MixtureGD& R::readMixtureGD()
   unsigned long c, v;
   assert(_pReader != NULL);
 
-  // nombre de distributions
+  // number of distributions
   unsigned long distribCount = _pReader->readInt4();
 
-  // taille du vecteur
+  // size of the vector
   unsigned long vectSize = _pReader->readInt4();
 
   _pMixture = &MixtureGD::create(K::k, _pReader->getFileName(),
