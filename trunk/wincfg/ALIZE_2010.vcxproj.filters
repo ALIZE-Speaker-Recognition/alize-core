@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\alizeString.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DistribGD.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AudioFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AudioFrame.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AudioInputStream.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AutoDestructor.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CmdLine.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Config.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConfigChecker.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConfigFileReaderAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConfigFileReaderRaw.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConfigFileReaderXml.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConfigFileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Distrib.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DistribGF.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DistribRefVector.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DoubleSquareMatrix.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Exception.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Feature.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileList.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderHTK.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderRaw.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderSingle.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderSPro3.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFileReaderSPro4.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureFlags.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Histo.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureInputStream.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureInputStreamModifier.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureMultipleFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FeatureServer.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FrameAcc.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FrameAccGD.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FrameAccGF.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Label.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LabelFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LabelServer.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XmlParser.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LabelSet.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LKVector.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Matrix.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mixture.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureDict.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileReaderAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileReaderAmiral.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileReaderRaw.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileReaderXml.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureFileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureGD.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureGDStat.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureGF.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureGFStat.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServer.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServerFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServerFileReaderAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServerFileReaderRaw.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServerFileReaderXml.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureServerFileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MixtureStat.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Seg.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegCluster.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegServer.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegServerFileReaderAbstract.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegServerFileReaderRaw.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SegServerFileWriter.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StatServer.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ULongVector.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ViterbiAccum.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XLine.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XList.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XListFileReader.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BoolMatrix.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\alize.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\alizeString.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AudioFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AudioFrame.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AudioInputStream.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AutoDestructor.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CmdLine.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Config.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConfigChecker.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConfigFileReaderAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConfigFileReaderRaw.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConfigFileReaderXml.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConfigFileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Distrib.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DistribGD.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DistribGF.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DistribRefVector.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DoubleSquareMatrix.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Exception.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Feature.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileList.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderHTK.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderRaw.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderSingle.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderSPro3.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileReaderSPro4.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureFlags.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureInputStream.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureInputStreamModifier.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureMultipleFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FeatureServer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FrameAcc.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FrameAccGD.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FrameAccGF.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Histo.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Label.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LabelFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LabelServer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LabelSet.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LKVector.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Mixture.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureDict.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileReaderAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileReaderAmiral.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileReaderRaw.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileReaderXml.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureFileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XmlParser.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XListFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XList.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XLine.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ViterbiAccum.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ULongVector.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\StatServer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegServerFileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegServerFileReaderRaw.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegServerFileReaderAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegServer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegCluster.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SegAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Seg.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RealVector.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RefVector.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Object.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureStat.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServerFileWriter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServerFileReaderXml.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServerFileReaderRaw.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServerFileReaderAbstract.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServerFileReader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureServer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureGFStat.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureGF.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureGDStat.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MixtureGD.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BoolMatrix.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{891b0d0b-84a6-46c0-8d8c-82aaf4060634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{9bf28bc7-1416-4211-ad1c-cf3cc66c02d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
