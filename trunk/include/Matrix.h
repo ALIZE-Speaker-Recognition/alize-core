@@ -65,6 +65,9 @@
 #define ALIZE_API
 #endif
 
+#pragma warning(disable: 4244) // possible loss of data
+#pragma warning(disable: 4146) // unary minus operator applied to unsigned type
+
 #include <new>
 #include <math.h>
 
@@ -495,8 +498,17 @@ namespace alize
             unsigned long rows=this->rows();
             unsigned long cols=this->cols();        
             T * array=_array.getArray();
-            outputMat.write((char*)&rows,sizeof(rows));
-            outputMat.write((char*)&cols,sizeof(cols));    
+
+
+			if (sizeof(unsigned int) == 4){
+				outputMat.write((char*)&rows,sizeof(unsigned int));
+				outputMat.write((char*)&cols,sizeof(unsigned int));
+			}
+			else if (sizeof(unsigned long) == 4){
+				outputMat.write((char*)&rows,sizeof(unsigned long));
+				outputMat.write((char*)&cols,sizeof(unsigned long));
+			}
+
             outputMat.write((char*)array,rows*cols*sizeof(T));
             outputMat.close();
           }
@@ -561,10 +573,23 @@ namespace alize
             if(!inputMat){
               throw IOException("Cannot open file", __FILE__, __LINE__,f);
           }
-            unsigned long rows;
-            unsigned long cols;
-            inputMat.read((char*)&rows,sizeof(rows));
-            inputMat.read((char*)&cols,sizeof(cols)); 
+
+			unsigned long rows, cols;
+
+			if (sizeof(unsigned long) == 4){
+				inputMat.read((char*)&rows,sizeof(unsigned long));
+				inputMat.read((char*)&cols,sizeof(unsigned long));
+			}
+			else if (sizeof(unsigned int) == 4){
+
+				unsigned int r,c;
+				inputMat.read((char*)&r,sizeof(unsigned int)); 
+				inputMat.read((char*)&c,sizeof(unsigned int)); 
+				rows = (unsigned long)r;
+				cols = (unsigned long)c;
+
+			}
+
             setDimensions(rows,cols);
             inputMat.read((char*)_array.getArray(),rows*cols*sizeof(T));
             inputMat.close();
@@ -777,7 +802,7 @@ namespace alize
 #if defined(_WIN32)
   template class Matrix<double>;
   template class Matrix<unsigned long>;
-  template class Matrix<bool>;
+  template class Matrix<float>;
 #endif
   
 } // end namespace alize

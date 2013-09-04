@@ -336,6 +336,7 @@ namespace alize
   template class RefVector<Object>;
   template class RefVector<DoubleSquareMatrix>;
   template class RefVector<DoubleVector>;
+  template class RefVector<ULongVector>;
   template class RefVector<SegCluster>;
   template class RefVector<MixtureGDStat>;
   template class RefVector<MixtureStat>;
