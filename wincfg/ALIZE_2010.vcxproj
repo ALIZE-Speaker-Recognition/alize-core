@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>ALIZE</ProjectName>
+    <ProjectGuid>{A218CB8F-4A64-45B6-9DA5-685CBF7B69F5}</ProjectGuid>
+    <RootNamespace>ALIZE_2005</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/lib/$(Configuration)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)/lib/$(Configuration)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/lib/$(Configuration)/tmp/</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)/lib/$(Configuration)/tmp/</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/lib/$(Configuration)/</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)/lib/$(Configuration)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/lib/$(Configuration)/tmp/</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)/lib/$(Configuration)/tmp/</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ALIZE_$(Platform)_$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ALIZE_$(Platform)_$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ALIZE_$(Platform)_$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ALIZE_$(Platform)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALIZE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)ALIZE_$(Platform)_$(Configuration).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALIZE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)ALIZE_$(Platform)_$(Configuration).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALIZE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)ALIZE_$(Platform)_$(Configuration).dll</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALIZE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)ALIZE_$(Platform)_$(Configuration).dll</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\alizeString.cpp" />
+    <ClCompile Include="..\src\AudioFileReader.cpp" />
+    <ClCompile Include="..\src\AudioFrame.cpp" />
+    <ClCompile Include="..\src\AudioInputStream.cpp" />
+    <ClCompile Include="..\src\AutoDestructor.cpp" />
+    <ClCompile Include="..\src\BoolMatrix.cpp" />
+    <ClCompile Include="..\src\CmdLine.cpp" />
+    <ClCompile Include="..\src\Config.cpp" />
+    <ClCompile Include="..\src\ConfigChecker.cpp" />
+    <ClCompile Include="..\src\ConfigFileReaderAbstract.cpp" />
+    <ClCompile Include="..\src\ConfigFileReaderRaw.cpp" />
+    <ClCompile Include="..\src\ConfigFileReaderXml.cpp" />
+    <ClCompile Include="..\src\ConfigFileWriter.cpp" />
+    <ClCompile Include="..\src\Distrib.cpp" />
+    <ClCompile Include="..\src\DistribGD.cpp" />
+    <ClCompile Include="..\src\DistribGF.cpp" />
+    <ClCompile Include="..\src\DistribRefVector.cpp" />
+    <ClCompile Include="..\src\DoubleSquareMatrix.cpp" />
+    <ClCompile Include="..\src\Exception.cpp" />
+    <ClCompile Include="..\src\Feature.cpp" />
+    <ClCompile Include="..\src\FeatureFileList.cpp" />
+    <ClCompile Include="..\src\FeatureFileReader.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderAbstract.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderHTK.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderRaw.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderSingle.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderSPro3.cpp" />
+    <ClCompile Include="..\src\FeatureFileReaderSPro4.cpp" />
+    <ClCompile Include="..\src\FeatureFileWriter.cpp" />
+    <ClCompile Include="..\src\FeatureFlags.cpp" />
+    <ClCompile Include="..\src\FeatureInputStream.cpp" />
+    <ClCompile Include="..\src\FeatureInputStreamModifier.cpp" />
+    <ClCompile Include="..\src\FeatureMultipleFileReader.cpp" />
+    <ClCompile Include="..\src\FeatureServer.cpp" />
+    <ClCompile Include="..\src\FileReader.cpp" />
+    <ClCompile Include="..\src\FileWriter.cpp" />
+    <ClCompile Include="..\src\FrameAcc.cpp" />
+    <ClCompile Include="..\src\FrameAccGD.cpp" />
+    <ClCompile Include="..\src\FrameAccGF.cpp" />
+    <ClCompile Include="..\src\Histo.cpp" />
+    <ClCompile Include="..\src\Label.cpp" />
+    <ClCompile Include="..\src\LabelFileReader.cpp" />
+    <ClCompile Include="..\src\LabelServer.cpp" />
+    <ClCompile Include="..\src\LabelSet.cpp" />
+    <ClCompile Include="..\src\LKVector.cpp" />
+    <ClCompile Include="..\src\Matrix.cpp" />
+    <ClCompile Include="..\src\Mixture.cpp" />
+    <ClCompile Include="..\src\MixtureDict.cpp" />
+    <ClCompile Include="..\src\MixtureFileReader.cpp" />
+    <ClCompile Include="..\src\MixtureFileReaderAbstract.cpp" />
+    <ClCompile Include="..\src\MixtureFileReaderAmiral.cpp" />
+    <ClCompile Include="..\src\MixtureFileReaderRaw.cpp" />
+    <ClCompile Include="..\src\MixtureFileReaderXml.cpp" />
+    <ClCompile Include="..\src\MixtureFileWriter.cpp" />
+    <ClCompile Include="..\src\MixtureGD.cpp" />
+    <ClCompile Include="..\src\MixtureGDStat.cpp" />
+    <ClCompile Include="..\src\MixtureGF.cpp" />
+    <ClCompile Include="..\src\MixtureGFStat.cpp" />
+    <ClCompile Include="..\src\MixtureServer.cpp" />
+    <ClCompile Include="..\src\MixtureServerFileReader.cpp" />
+    <ClCompile Include="..\src\MixtureServerFileReaderAbstract.cpp" />
+    <ClCompile Include="..\src\MixtureServerFileReaderRaw.cpp" />
+    <ClCompile Include="..\src\MixtureServerFileReaderXml.cpp" />
+    <ClCompile Include="..\src\MixtureServerFileWriter.cpp" />
+    <ClCompile Include="..\src\MixtureStat.cpp" />
+    <ClCompile Include="..\src\Object.cpp" />
+    <ClCompile Include="..\src\Seg.cpp" />
+    <ClCompile Include="..\src\SegAbstract.cpp" />
+    <ClCompile Include="..\src\SegCluster.cpp" />
+    <ClCompile Include="..\src\SegServer.cpp" />
+    <ClCompile Include="..\src\SegServerFileReaderAbstract.cpp" />
+    <ClCompile Include="..\src\SegServerFileReaderRaw.cpp" />
+    <ClCompile Include="..\src\SegServerFileWriter.cpp" />
+    <ClCompile Include="..\src\StatServer.cpp" />
+    <ClCompile Include="..\src\ULongVector.cpp" />
+    <ClCompile Include="..\src\ViterbiAccum.cpp" />
+    <ClCompile Include="..\src\XLine.cpp" />
+    <ClCompile Include="..\src\XList.cpp" />
+    <ClCompile Include="..\src\XListFileReader.cpp" />
+    <ClCompile Include="..\src\XmlParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\alize.h" />
+    <ClInclude Include="..\include\alizeString.h" />
+    <ClInclude Include="..\include\AudioFileReader.h" />
+    <ClInclude Include="..\include\AudioFrame.h" />
+    <ClInclude Include="..\include\AudioInputStream.h" />
+    <ClInclude Include="..\include\AutoDestructor.h" />
+    <ClInclude Include="..\include\BoolMatrix.h" />
+    <ClInclude Include="..\include\CmdLine.h" />
+    <ClInclude Include="..\include\Config.h" />
+    <ClInclude Include="..\include\ConfigChecker.h" />
+    <ClInclude Include="..\include\ConfigFileReaderAbstract.h" />
+    <ClInclude Include="..\include\ConfigFileReaderRaw.h" />
+    <ClInclude Include="..\include\ConfigFileReaderXml.h" />
+    <ClInclude Include="..\include\ConfigFileWriter.h" />
+    <ClInclude Include="..\include\Distrib.h" />
+    <ClInclude Include="..\include\DistribGD.h" />
+    <ClInclude Include="..\include\DistribGF.h" />
+    <ClInclude Include="..\include\DistribRefVector.h" />
+    <ClInclude Include="..\include\DoubleSquareMatrix.h" />
+    <ClInclude Include="..\include\Exception.h" />
+    <ClInclude Include="..\include\Feature.h" />
+    <ClInclude Include="..\include\FeatureFileList.h" />
+    <ClInclude Include="..\include\FeatureFileReader.h" />
+    <ClInclude Include="..\include\FeatureFileReaderAbstract.h" />
+    <ClInclude Include="..\include\FeatureFileReaderHTK.h" />
+    <ClInclude Include="..\include\FeatureFileReaderRaw.h" />
+    <ClInclude Include="..\include\FeatureFileReaderSingle.h" />
+    <ClInclude Include="..\include\FeatureFileReaderSPro3.h" />
+    <ClInclude Include="..\include\FeatureFileReaderSPro4.h" />
+    <ClInclude Include="..\include\FeatureFileWriter.h" />
+    <ClInclude Include="..\include\FeatureFlags.h" />
+    <ClInclude Include="..\include\FeatureInputStream.h" />
+    <ClInclude Include="..\include\FeatureInputStreamModifier.h" />
+    <ClInclude Include="..\include\FeatureMultipleFileReader.h" />
+    <ClInclude Include="..\include\FeatureServer.h" />
+    <ClInclude Include="..\include\FileReader.h" />
+    <ClInclude Include="..\include\FileWriter.h" />
+    <ClInclude Include="..\include\FrameAcc.h" />
+    <ClInclude Include="..\include\FrameAccGD.h" />
+    <ClInclude Include="..\include\FrameAccGF.h" />
+    <ClInclude Include="..\include\Histo.h" />
+    <ClInclude Include="..\include\Label.h" />
+    <ClInclude Include="..\include\LabelFileReader.h" />
+    <ClInclude Include="..\include\LabelServer.h" />
+    <ClInclude Include="..\include\LabelSet.h" />
+    <ClInclude Include="..\include\LKVector.h" />
+    <ClInclude Include="..\include\Matrix.h" />
+    <ClInclude Include="..\include\Mixture.h" />
+    <ClInclude Include="..\include\MixtureDict.h" />
+    <ClInclude Include="..\include\MixtureFileReader.h" />
+    <ClInclude Include="..\include\MixtureFileReaderAbstract.h" />
+    <ClInclude Include="..\include\MixtureFileReaderAmiral.h" />
+    <ClInclude Include="..\include\MixtureFileReaderRaw.h" />
+    <ClInclude Include="..\include\MixtureFileReaderXml.h" />
+    <ClInclude Include="..\include\MixtureFileWriter.h" />
+    <ClInclude Include="..\include\MixtureGD.h" />
+    <ClInclude Include="..\include\MixtureGDStat.h" />
+    <ClInclude Include="..\include\MixtureGF.h" />
+    <ClInclude Include="..\include\MixtureGFStat.h" />
+    <ClInclude Include="..\include\MixtureServer.h" />
+    <ClInclude Include="..\include\MixtureServerFileReader.h" />
+    <ClInclude Include="..\include\MixtureServerFileReaderAbstract.h" />
+    <ClInclude Include="..\include\MixtureServerFileReaderRaw.h" />
+    <ClInclude Include="..\include\MixtureServerFileReaderXml.h" />
+    <ClInclude Include="..\include\MixtureServerFileWriter.h" />
+    <ClInclude Include="..\include\MixtureStat.h" />
+    <ClInclude Include="..\include\Object.h" />
+    <ClInclude Include="..\include\RealVector.h" />
+    <ClInclude Include="..\include\RefVector.h" />
+    <ClInclude Include="..\include\Seg.h" />
+    <ClInclude Include="..\include\SegAbstract.h" />
+    <ClInclude Include="..\include\SegCluster.h" />
+    <ClInclude Include="..\include\SegServer.h" />
+    <ClInclude Include="..\include\SegServerFileReaderAbstract.h" />
+    <ClInclude Include="..\include\SegServerFileReaderRaw.h" />
+    <ClInclude Include="..\include\SegServerFileWriter.h" />
+    <ClInclude Include="..\include\StatServer.h" />
+    <ClInclude Include="..\include\ULongVector.h" />
+    <ClInclude Include="..\include\ViterbiAccum.h" />
+    <ClInclude Include="..\include\XLine.h" />
+    <ClInclude Include="..\include\XList.h" />
+    <ClInclude Include="..\include\XListFileReader.h" />
+    <ClInclude Include="..\include\XmlParser.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
