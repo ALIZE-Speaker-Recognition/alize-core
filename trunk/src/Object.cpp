@@ -143,7 +143,7 @@ void Object::assertIsInBounds(const char* fileName, int line,
                               unsigned long i, unsigned long size)
 {
   if (i >= size)
-    throw IndexOutOfBoundsException("", __FILE__, __LINE__, i, size);
+    throw IndexOutOfBoundsException("", fileName, line, i, size);
 }
 //-------------------------------------------------------------------------
 void Object::assertMemoryIsAllocated(const void* p, const char* f, int l)
