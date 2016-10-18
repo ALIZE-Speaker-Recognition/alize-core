@@ -82,9 +82,9 @@ const real_t Object::PI2 = 3.14159265358979323846*2;
 const K K::k;
 namespace alize
 {
-  ALIZE_API const TopDistribsAction DETERMINE_TOP_DISTRIBS;
-  ALIZE_API const TopDistribsAction USE_TOP_DISTRIBS;
-  ALIZE_API const TopDistribsAction TOP_DISTRIBS_NO_ACTION;
+  ALIZE_API const TopDistribsAction DETERMINE_TOP_DISTRIBS = TopDistribsAction(0);
+  ALIZE_API const TopDistribsAction USE_TOP_DISTRIBS = TopDistribsAction(1);
+  ALIZE_API const TopDistribsAction TOP_DISTRIBS_NO_ACTION = TopDistribsAction(2);
 }
 //-------------------------------------------------------------------------
 Object::Object()
@@ -101,9 +101,6 @@ Object::Object()
       sizeof(double)    != 8 )
       exit(-1); // TODO : yes, but what to do ?
 
-    const_cast<TopDistribsAction&>(DETERMINE_TOP_DISTRIBS)._i = 0;
-    const_cast<TopDistribsAction&>(USE_TOP_DISTRIBS)._i = 1;
-    const_cast<TopDistribsAction&>(TOP_DISTRIBS_NO_ACTION)._i = 2;
     _initialized = true;
   }
 
