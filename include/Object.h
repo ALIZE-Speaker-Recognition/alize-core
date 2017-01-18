@@ -185,7 +185,7 @@ namespace alize
     friend class Object;
   public:
     TopDistribsAction(): _i(0) {};
-    TopDistribsAction(long i): _i(i) {};
+    TopDistribsAction(int i): _i(i) {};
     TopDistribsAction(const TopDistribsAction& o):_i(o._i) {};
     bool operator==(const TopDistribsAction& o) const { return _i == o._i; };
     bool operator!=(const TopDistribsAction& o) const { return _i != o._i; };
@@ -369,7 +369,7 @@ namespace alize
     friend class FeatureFileReader;
     friend class FeatureFileReaderSingle;
     friend class FeatureInputStreamModifier;
-    friend class FeatureServer;
+    friend class FeatureServer;    
 
   private :
     K(){}; /*! private constructor */
