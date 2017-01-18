@@ -69,7 +69,7 @@ typedef FeatureServer S;
 
 //-------------------------------------------------------------------------
 S::FeatureServer()
-:_pInputStream(NULL) {}
+:_ownInputStream(true), _pInputStream(NULL) {}
 //-------------------------------------------------------------------------
 S::FeatureServer(const Config& c)
 :_pInputStream(NULL) { init(c); }

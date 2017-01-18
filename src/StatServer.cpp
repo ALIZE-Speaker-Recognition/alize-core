@@ -63,7 +63,7 @@
 //#elif defined(__APPLE__)
 //  #define ISNAN(x) std::isnan(x)
 #elif defined(linux) || defined(__linux) || defined(__CYGWIN__) || defined(__APPLE__)
-  #define ISNAN(x) isnan(x)
+  #define ISNAN(x) std::isnan(x)
 #else
   #error "Unsupported OS\n"
 #endif

@@ -140,6 +140,7 @@ bool R::readFeature(Feature& f, unsigned long step)
   // si on demande une feature hors du buffer
   if (_featureIndex < _featureIndexOfBuffer ||
       _featureIndex >= _featureIndexOfBuffer + _nbStored)
+		//  _featureIndex > _featureIndexOfBuffer + _nbStored)
   {
     if (!_bufferSizeDefined)
     {
@@ -161,6 +162,8 @@ bool R::readFeature(Feature& f, unsigned long step)
       }
       if (m < getVectSize()) // minimum size
         m = getVectSize();
+	  if ( ( m % getVectSize() ) != 0)
+		 m = floor(m/getVectSize())*getVectSize();
       _pBuffer->setSize(m);
       _bufferSizeDefined = true;
     }
@@ -186,7 +189,7 @@ bool R::readFeature(Feature& f, unsigned long step)
     }
     // chargement des donnees dans le buffer
     if (_pReader != NULL)
-      _nbStored = _pReader->readSomeFloats(*_pBuffer)/getVectSize();
+       _nbStored = (_pReader->readSomeFloats(*_pBuffer)/getVectSize());		  
     else
     {
       // Pas performant. A améliorer
