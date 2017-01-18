@@ -158,6 +158,9 @@ namespace alize
     ///
     virtual lk_t computeLK(const Feature&) const;
     virtual lk_t computeLK(const Feature&, unsigned long idx) const;
+	
+	virtual lk_t computeLLK(const Feature&) const;    
+	virtual lk_t computeLLK(const Feature&, unsigned long idx) const;
 
     /// Sets a value in the covariance vector.
     /// A zero value is automatically replaced by a positive-and-non-zero

@@ -178,7 +178,14 @@ namespace alize
 			  }
 	  }
     }
-      
+	Matrix<T>&  concatenate(const Matrix<T> &A) {		
+		setDimensions(_rows + A.rows(),_cols);	
+		for (unsigned long i=0;i<A.rows();i++)
+			for (unsigned long j=0;j<A.cols();j++)				
+				_array[(_rows+i)*_cols+j]=A(i,j);
+		return *this;
+	}
+
     /// Copy operator. Copy a matrix into this matrix
     /// @param m the matrix 
     ///
@@ -421,6 +428,40 @@ namespace alize
       _array += m._array;
       return *this;
     }
+
+	/// Adds a vector to each row
+    /// @param m a matrix
+    /// @return this matrix
+    ///
+    Matrix<T>& addRowVector(const RealVector<T>& v, double sign)
+    {
+      if (_cols != v.size())
+        throw Exception("Dimensions of matrices do not match", __FILE__, __LINE__);
+	 
+	   for (unsigned long i=0; i<_rows; i++){
+              for (unsigned long j=0; j<_cols; j++){
+                    _array[i*_cols+j]+=sign*(T)v[j];							
+			  }
+	   }
+		return *this;
+    }
+	/// Adds a vector to each row
+    /// @param m a matrix
+    /// @return this matrix
+    ///
+    Matrix<T>& addColumnVector(const RealVector<T>& v, T sign)
+    {
+      if (_rows != v.size())
+        throw Exception("Dimensions of matrices do not match", __FILE__, __LINE__);
+	  for (unsigned long j=0; j<_cols; j++){
+		for (unsigned long i=0; i<_rows; i++){              
+                    _array[i*_cols+j]+=sign*(T)v[i];		
+		}
+	  }
+	  return *this;
+    }
+
+
 
     /// Substracts a matrix from  this matrix and returns
     /// the result in a new matrix (new matrix = this - m);

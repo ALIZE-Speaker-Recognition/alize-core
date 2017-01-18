@@ -164,6 +164,9 @@ namespace alize
     virtual lk_t computeLK(const Feature&) const = 0;
     virtual lk_t computeLK(const Feature&, unsigned long idx) const = 0;
 
+    virtual lk_t computeLLK(const Feature&) const = 0;
+    virtual lk_t computeLLK(const Feature&, unsigned long idx) const = 0;
+
     /// Returns the constante used to compute likelihood.
     /// @return the value of the constant
     ///
@@ -203,7 +206,7 @@ namespace alize
 
     const unsigned long _vectSize;   /*!< dimension of the distribution */
     real_t              _det;        /*!< determinant */
-    real_t              _cst;        /*!< constante */
+    real_t              _cst;        /*!< constante */	
     DoubleVector        _meanVect;   /*!< mean vector */
   private :
     unsigned long _refCounter;

@@ -265,6 +265,8 @@ namespace alize
     virtual String getClassName() const = 0;
     virtual String toString() const;
 
+	real_t logsumexp(real_t[], size_t );
+
   protected :
   
     const unsigned long _distribCount;
