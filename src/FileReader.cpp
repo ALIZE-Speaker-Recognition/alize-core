@@ -119,7 +119,7 @@ unsigned long R::getFileLength()
   if (!_fileLengthDefined)
   {
     bool wasOpened = isOpen();
-    unsigned long pos;
+    long pos;
     long l;
 
     if (wasOpened)
