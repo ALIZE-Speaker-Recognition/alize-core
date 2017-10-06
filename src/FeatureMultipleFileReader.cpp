@@ -217,7 +217,7 @@ bool R::featureWantedIsInHistoric(unsigned long featureNbr) const
   if (featureNbr > _lastFeatureIndex)
     return false;
   if (_historicSize > _lastFeatureIndex)
-    return featureNbr >= 0;
+    return true;
   return featureNbr >= _lastFeatureIndex-_historicSize;
 }
 //-------------------------------------------------------------------------
