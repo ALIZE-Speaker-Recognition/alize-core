@@ -116,8 +116,7 @@ const MixtureGF& R::readMixtureGF()
 //-------------------------------------------------------------------------
 void R::eventOpeningElement(const String& path)
 {
-  if (false) {}
-  else if (path.endsWith("<mean><i>"))
+  if (path.endsWith("<mean><i>"))
   {
     if (_meanIndexFound)
       eventError("More than one tag " + path + " !");
@@ -217,10 +216,7 @@ void R::eventOpeningElement(const String& path)
 //-------------------------------------------------------------------------
 void R::eventClosingElement(const String& path, const String& value)
 {
-  if (false)
-  {
-  }
-  else if (path.endsWith("<mean><i>"))
+  if (path.endsWith("<mean><i>"))
   {
     _meanIndex = value.toULong();
   }
