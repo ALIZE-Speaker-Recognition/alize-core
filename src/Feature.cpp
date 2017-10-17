@@ -196,7 +196,7 @@ void Feature::copySelectedData(const Feature& f, const ULongVector& selection)
 {
   const unsigned long selectionSize = selection.size();
   if (selectionSize > _vectSize)
-      throw Exception("", __FILE__, __LINE__);
+      throw Exception("The number of selected components is higher than the size of the feature vector", __FILE__, __LINE__);
   const unsigned long sourceSize = f._vectSize;
   unsigned long* selectionVect = selection.getArray();
   double* sourceVect = f._dataVector;
@@ -204,7 +204,7 @@ void Feature::copySelectedData(const Feature& f, const ULongVector& selection)
   for (unsigned long i=0; i<selectionSize; i++)
   {
     if ( (sourceIdx = selectionVect[i]) >= sourceSize)
-      throw Exception("", __FILE__, __LINE__);
+      throw Exception("A selected component is outside of the feature vector", __FILE__, __LINE__);
     _dataVector[i] = sourceVect[sourceIdx];
   }
   // copy validity and labelCode too
