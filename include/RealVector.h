@@ -312,6 +312,40 @@ namespace alize
       qsort(_array, _size, sizeof(T), compare);
     }
 
+	typedef struct X { 
+		unsigned long idx; 
+		T realvalue;
+	} valueidx ;
+	static int valueidxcompare(const void* s1, const void* s2)
+    {
+	  T index1 = ((valueidx*)s1)->realvalue;
+	  T index2 = ((valueidx*)s2)->realvalue;
+	  if ( index1 > index2)
+        return 1;
+      if ( index1 < index2)
+        return -1;
+      return 0;
+    }	
+	RealVector<T> sortIndexes() const
+	{	 	      
+	  
+	  // initialize original index locations
+	  RealVector<T> idx(_size,_size);
+	  valueidx* iarray = new valueidx[_size];
+	  for (unsigned long i=0; i<_size; i++)
+	  {
+      	iarray[i].idx = i;
+		iarray[i].realvalue = _array[i];
+	  }
+	  // sort indexes based on comparing values in v
+	  qsort( iarray , _size, sizeof(valueidx), valueidxcompare);	  	  
+	  for (unsigned long i=0; i<_size; i++)
+	  {
+		idx[i] = (T)(iarray[i]).idx;
+	  }
+	  return idx;
+	}
+	
     /// Returns the index of largest value in the vector
     /// @return the index of the largest value
     /// @exception Exception if the vector is empty
@@ -377,8 +411,7 @@ namespace alize
         return -1;
       return 0;
     }
-
-	
+    
   };
 
   typedef RealVector<double> DoubleVector;

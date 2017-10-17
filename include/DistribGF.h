@@ -159,6 +159,8 @@ namespace alize
     ///
     virtual lk_t computeLK(const Feature&) const;
     virtual lk_t computeLK(const Feature&, unsigned long idx) const;
+    virtual lk_t computeLLK(const Feature&) const;
+    virtual lk_t computeLLK(const Feature&, unsigned long idx) const;
 
     /// Sets a value in the covariance matrix.
     /// WARNING : contrary to class Matrix, colum index is FIRST

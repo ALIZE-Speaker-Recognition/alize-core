@@ -62,7 +62,7 @@
 //#elif defined(__APPLE__)
 //  #define ISNAN(x) std::isnan(x)
 #elif defined(linux) || defined(__linux) || defined(__CYGWIN__) || defined(__APPLE__)
-  #define ISNAN(x) isnan(x)
+  #define ISNAN(x) std::isnan(x)
 #else
   #error "Unsupported OS\n"
 #endif
@@ -210,6 +210,46 @@ lk_t DistribGF::computeLK(const Feature& frame, unsigned long idx) const
 {
   real_t x = frame[idx] - _meanVect[idx];
   real_t tmp = _cst * exp(-0.5 * x * x * _covInvMatr(idx, idx) );
+  if (ISNAN(tmp))
+    return EPS_LK;
+  return tmp;
+}
+lk_t DistribGF::computeLLK(const Feature& frame) const
+{
+  if (frame.getVectSize() != _vectSize)
+    throw Exception("distrib vectSize ("
+        + String::valueOf(_vectSize) + ") != feature vectSize ("
+      + String::valueOf(frame.getVectSize()) + ")", __FILE__, __LINE__);
+
+  real_t tmp = 0.0;
+  real_t tmp2;
+  unsigned long i, j, ii;
+  real_t*      m = _meanVect.getArray();
+  real_t*      x = _tmpVect.getArray();
+  real_t*      c = _covInvMatr.getArray();
+  Feature::data_t* f = frame.getDataVector();
+
+  for (j=0; j<_vectSize; j++)
+    x[j] = f[j] - m[j];
+  for (i=0; i<_vectSize; i++)
+  {
+    tmp2 = 0.0;
+    ii = i*_vectSize;
+    for (j=0; j<_vectSize; j++)
+      tmp2 += x[j] * c[j+ii];
+    tmp += tmp2 * x[i];
+  }
+
+  tmp = log(_cst) + (-0.5*tmp);
+  if (ISNAN(tmp))
+    return EPS_LK;
+  return tmp;
+}
+//-------------------------------------------------------------------------
+lk_t DistribGF::computeLLK(const Feature& frame, unsigned long idx) const
+{
+  real_t x = frame[idx] - _meanVect[idx];
+  real_t tmp = log(_cst) + (-0.5 * x * x * _covInvMatr(idx, idx) );
   if (ISNAN(tmp))
     return EPS_LK;
   return tmp;

@@ -78,7 +78,7 @@
 #include "Feature.h"
 
 namespace alize
-{
+{	
   /// This class implements a growable template array of objects.
   /// Note that the array just store pointers on the elements.
   /// If you delete the array, the pointed objects are not deleted.
